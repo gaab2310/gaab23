@@ -12,3 +12,4 @@ function saudacao (nome = "Visitante") {
   saudacao(); olá, visitante !
   saudacao("Gaby"); // olá, Gaby!
 }
+
