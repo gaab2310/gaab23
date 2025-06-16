@@ -7,6 +7,8 @@ console.log(dobrar(valor));
 console.log(valor) // 10
 
 function saudacao (nome = "Visitante") {
-  return `Olá, ${nome}!`;
-  console.log(saudacao("João")); // Olá, João!
+    console.log ( olá, s(nome)!);
+
+  saudacao(); olá, visitante !
+  saudacao("Gaby"); // olá, Gaby!
 }
