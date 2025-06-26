@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        label,input {
+            display: block;
+            margin: 8px 0;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        ul {
+            margin-top: 20px;
+        }
+ 
+    </style>
+    </head>
+
+<body>
+    <h1>Cadastro de alunos</h1>
+    <label>nome:</label>
+    <input type="text" id="nome"/>
+    <label>idade:</label>
+    <input type="number" id="idade"/>
+    <label>curso:</label>
+    <input type="text" id="curso"/>
+    <button> Cadastrar aluno</button> 
+    <h2>Alunos Cadastrados</h2>
+    <ul id="alunos"></ul>
+   
+
+<script>
+    constalunos = [];
+
+ function CadastrarAluno(){
+    const nome = document.getElementById("nome").value; 
+    const idade = document.getElementById("idade").value;
+    const curso = document.getElementById("curso").value;
+    if (nome && idade && curso) {
+        const aluno = {
+            nome,
+            idade, 
+            curso
+        };
+        alunos.push(aluno);
+        exibiralunos();
+
+    }
+    else {
+        alert("Por favor, preencha todos os campos.");
+    }
+}
+function exibiralunos() {
+    const aluno = document.getElementById("alunos");
+    lista.innerHTML = "";
+    for(let i = 0; i < alunos.length; i++) {
+       const aluno = alunos[i];
+       const item = document.createElement("li"); 
+       item.textContent = `aluno: ${i+1}: 
+       nome: ${aluno.nome}, idade: ${aluno.idade}, curso: ${aluno.curso}`;  
+         lista.appendChild(item);
+    }
+ }
+ 
+
+ function limparCampos() {
+    document.getElementById("nome").value = "";
+    document.getElementById("idade").value = "";
+    document.getElementById("curso").value = "";
+ }
+ </script>
+      </body>
+</html> 
+
+
+
+        
+ 

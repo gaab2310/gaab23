@@ -1,0 +1,13 @@
+<script>
+    function trocaimagem() {
+        var elemento = document.getElementById("myimage");
+        if ( elemento.src.match("button")) 
+            {elemento.src = "pic_button.gif";
+        } else {
+            elemento.src = "pic_button.gif";
+        }
+    }
+</script>
+<p><img id="myimage" onclick="trocaimagem()"
+    src="pic_button.gif" width=100  height=180></p>
+    <p> clique na lampada para ligar/desliga a luz </p>
